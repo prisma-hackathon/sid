@@ -1,0 +1,18 @@
+generator photon {
+  provider = "photonjs"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:dev.db"
+}
+
+model Video {
+  id     Int     @id
+  frames Frame[]
+}
+
+model Frame {
+  id      Int    @id
+  content String
+}
