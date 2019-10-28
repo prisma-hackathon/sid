@@ -2,13 +2,24 @@
   "name": "script",
   "license": "MIT",
   "devDependencies": {
+    "@types/ascii-art": "^1.4.0",
     "@types/node": "^12.11.5",
-    "prisma2": "2.0.0-preview015",
+    "prisma2": "^2.0.0-alpha.272",
     "ts-node": "8.4.1",
     "typescript": "3.6.4"
   },
   "scripts": {
     "dev": "ts-node ./script.ts",
     "postinstall": "prisma2 generate"
+  },
+  "bin": {
+    "encode": "./bin.js"
+  },
+  "dependencies": {
+    "ascii-art": "^1.5.1",
+    "canvas": "^2.6.0",
+    "commander": "^3.0.2",
+    "image-to-ascii": "^3.0.12",
+    "log-update": "^3.3.0"
   }
 }
